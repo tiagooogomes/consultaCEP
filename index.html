@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>     
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <div id="geral">
+                <section id="titulo">
+                    <h1>Consulta ao Código de<span>Endereçamento Postal</span></h1>
+                           
+                    <p>Nessa plataforma você poderá consultar um CEP e receber <span>todas as informações refentes a ele.</span> </p>
+                    <div id="botoes">
+                        <button id="botao-consulta">CONSULTAR</button>
+                        <button id="botao-mapa">MAPA</button>
+                    </div>
+                </section>
+                <section id="informacoes">
+                    <div id="cep">
+                        <h2><span id="info1">0</span> região</h2>
+                        <h2><span id="info2">0</span> sub-região</h2>
+                        <h2><span id="info3">0</span> setor</h2>
+                        <h2><span id="info4">0</span> subsetor</h2>
+                        <h2><span id="info5">0</span> dividor</h2>
+                        <h2><span>-</span></h2>
+                        <h2><span id="info6">000</span>distribuição</h2>                      
+                    </div>
+                    <h3 id="cidade">- - - - - -----</h3>
+                    <form>
+                        <input type="number" />
+                        <label>Digite seu CEP sem o traço</label>
+                    </form>
+                </section>
+            </div>
+            <div id="teste">
+                <div id="extras">
+                    <p>Latitude <span id="latitude">00.00000</span></p>
+                    <p>Longitude <span id="longitude">00.00000</span></p>
+                    <p>DDD <span id="ddd">(00) 0000-0000</span></p>
+                    <p>IBGE <span id="ibge">0000000</span></p>
+                </div>
+            </div>
+            <!-- <iframe  src="https://maps.google.com/maps?q=22030040&t=&z=13&ie=UTF8&iwloc=&output=embed"  allowfullscreen="" loading="lazy"></iframe> -->
+        </main>
+        <footer>
+            <h4>By Aspirante Tiago Santos</h4>
+        </footer>
+        <script src="main.js"></script>
+    </body>
+    <!-- https://www.google.com/maps/search/?api=1&parameters -->
+</html>
