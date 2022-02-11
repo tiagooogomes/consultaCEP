@@ -5,10 +5,11 @@ $(function() {
 });
 
 const algumaCoisa = $('#informacoes').html();
+let CEP = 0;
 
 function consultarCEP() {
 
-    const CEP = $('input').val()
+    CEP = $('input').val()
 
     if($('#informacoes').html() !== algumaCoisa){
 
@@ -88,6 +89,6 @@ function verificarValidade() {
 
 function mostrarMapa() {
     // console.log($('#informacoes').html());
-    const cep = $('input').val();
+    const cep = CEP;
     $('#informacoes').html(`<iframe src="https://maps.google.com/maps?q=${cep}&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>`);
 }
