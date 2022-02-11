@@ -7,9 +7,15 @@ $(function() {
 const algumaCoisa = $('#informacoes').html();
 
 function consultarCEP() {
+
     const CEP = $('input').val()
 
-   
+    if($('#informacoes').html() !== algumaCoisa){
+
+        $('#informacoes').html(algumaCoisa);
+
+    }
+
     $.ajax({
         url: `https://cep.awesomeapi.com.br/json/${CEP}`
     })
@@ -28,13 +34,10 @@ function consultarCEP() {
         $('#ibge').html(data.city_ibge);
     });
 
-    if($('#informacoes').html() !== algumaCoisa){
 
-        $('#informacoes').html(algumaCoisa);
-    }
 
     aparecerInformacoes();
-    atualizarMostradorCEP();
+    atualizarMostradorCEP(CEP);
  
 }
 
@@ -43,12 +46,12 @@ function aparecerInformacoes() {
     $('#teste').stop().show(600);
 }
 
-function atualizarMostradorCEP() {
+function atualizarMostradorCEP(cep) {
     console.log($('input').val())
 
-    const valor = $('input').val()
+    const valor = cep
 
-    console.log(valor)
+    // console.log(valor)
 
     $('#info1').html(valor[0]);
     $('#info2').html(valor[1]);
